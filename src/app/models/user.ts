@@ -5,7 +5,7 @@ export interface User {
   /* for version 2*/
   cidade: string
     
-  /* for version 3
+  /* for version 3 */
   email: string
-  */
+  
 }

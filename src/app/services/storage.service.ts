@@ -57,9 +57,9 @@ export class StorageService {
         await this.loadUsers();
         this.isUserReady.next(true);
     }
-    async addUser(name: string, cidade: string) {
-        const sql = `INSERT INTO users (name, cidade) VALUES (?, ?);`;
-        await this.db.run(sql,[name, cidade]);
+    async addUser(name: string, cidade: string, email: string) {
+        const sql = `INSERT INTO users (name, cidade, email) VALUES (?, ?, ?);`;
+        await this.db.run(sql,[name, cidade, email]);
         await this.getUsers();
     }
 

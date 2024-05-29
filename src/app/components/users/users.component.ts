@@ -16,6 +16,7 @@ import { of, switchMap } from 'rxjs';
 export class UsersComponent  implements OnInit {
   newUserName = ''
   newCidade = ''
+  newEmail = ''
   userList: User[] = []
   isWeb: any
 
@@ -40,9 +41,10 @@ export class UsersComponent  implements OnInit {
       }
   }
   async createUser() {
-      await this.storage.addUser(this.newUserName, this.newCidade)
+      await this.storage.addUser(this.newUserName, this.newCidade, this.newEmail)
       this.newUserName = ''
       this.newCidade = ''
+      this.newEmail = ''
       console.log(this.userList, '#users')
   }
 

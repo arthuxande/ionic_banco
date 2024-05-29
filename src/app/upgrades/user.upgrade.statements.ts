@@ -15,9 +15,16 @@ export class UserUpgradeStatements {
       {
       toVersion: 2,
       statements: [
-          `ALTER TABLE users ADD COLUMN cidade TEXT;`,
+          `ALTER TABLE users ADD COLUMN cidade TEXT DEFAULT NULL;`,
       ]
       },
+
+      {
+        toVersion: 3,
+        statements: [
+            `ALTER TABLE users ADD COLUMN email TEXT DEFAULT NULL;`,
+        ]
+        },
       
   ]
 }
