@@ -1,15 +1,25 @@
 <ion-content>
 
   <ion-row>
-      <ion-col size="9">
+      <ion-col size="3">
       <ion-item>
           <ion-input
           label="Name" labelPlacement="stacked"
-          placeholder="Rose Miller" [(ngModel)]="newUserName"
+          placeholder="Arthur" [(ngModel)]="newUserName"
           >
           </ion-input>
       </ion-item>
       </ion-col>
+
+      <ion-col size="3">
+        <ion-item>
+            <ion-input
+            label="Cidade" labelPlacement="stacked"
+            placeholder="Ex.Rio Claro" [(ngModel)]="newCidade"
+            >
+            </ion-input>
+        </ion-item>
+        </ion-col>
 
       <ion-col size="3">
       <ion-button
@@ -28,7 +38,7 @@
       </ion-checkbox>
 
       <span>
-        {{ user.id }} - {{ user.name }} - {{ user.active }}
+        {{ user.id }} - {{ user.name }} - {{ user.active }} - {{user.cidade}}
       </span>
 
       <ion-button slot="end" (click)="deleteUser(user)" fill="clear" color="danger">
